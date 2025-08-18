@@ -1,8 +1,6 @@
-# .Net build
+# .NET / IDE
 bin/
 obj/
-
-# User Settings
+.vs/
 *.user
 *.suo
-.vs/
