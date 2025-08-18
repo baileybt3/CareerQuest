@@ -32,8 +32,15 @@ while (true)
             var company = Console.ReadLine() ?? "";
             Console.Write("Role: ");
             var role = Console.ReadLine() ?? "";
+            Console.WriteLine("Status: ");
+            var status = Console.ReadLine() ?? "";
 
-            var job = new JobApplication { Company = company, Role = role };
+            var job = new JobApplication
+            {
+                Company = company,
+                Role = role,
+                Status = status
+            };
             jobs.Add(job);
             Console.WriteLine("Added.");
             break;
@@ -44,14 +51,13 @@ while (true)
                 Console.WriteLine("(no jobs yet)");
                 break;
             }
-
             Console.WriteLine("Jobs: ");
             foreach (var j in jobs)
             {
-                Console.WriteLine($"- {j.Company} | {j.Role}");
-                
+                Console.Write($"- {j.Company} | {j.Role} | {j.Status}");
             }
             break;
+            
 
         case "about":
             Console.WriteLine("CareerQuest v0.1 - track jobs and practice C#");
@@ -72,4 +78,5 @@ class JobApplication
 {
     public string Company { get; set; } = "";
     public string Role { get; set; } = "";
+    public string Status { get; set; } = "";
 }
