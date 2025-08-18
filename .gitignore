@@ -1,0 +1,8 @@
+# .Net build
+bin/
+obj/
+
+# User Settings
+*.user
+*.suo
+.vs/
